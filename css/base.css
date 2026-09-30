@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Base: reset, typografi och tillgänglighet
+   Mobil-först. Bredare layouter läggs på med media queries i layout.css.
+   ========================================================================== */
+
+/* --- Reset ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+}
+
+/* Responsiva bilder som standard */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Typografi: rubrikhierarki h1-h3 -------------------------------------- */
+h1,
+h2,
+h3 {
+  line-height: var(--line-height-heading);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p + p {
+  margin-top: var(--space-2);
+}
+
+/* --- Länkar --------------------------------------------------------------- */
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* --- Tillgänglighet: tydlig fokusmarkering vid tangentbordsnavigering ----- */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* Hoppa-till-innehåll-länk, syns bara vid fokus */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: var(--space-1);
+}
+
+/* Respektera användare som vill ha mindre rörelse */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

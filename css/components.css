@@ -186,17 +186,6 @@
   width: 100%;
 }
 
-.about__figure {
-  width: 100%;
-}
-
-.about__image {
-  width: 100%;
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-}
-
 .about-path {
   display: flex;
   flex-direction: column;
@@ -221,11 +210,6 @@
     flex-direction: row;
     align-items: center;
     gap: var(--space-6);
-  }
-
-  .about__content,
-  .about__figure {
-    flex: 1;
   }
 
   .about-path {

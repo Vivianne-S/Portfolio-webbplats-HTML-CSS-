@@ -86,10 +86,6 @@ main {
   border-block: 1px solid var(--color-border);
 }
 
-.section--divider {
-  border-top: 2px solid var(--color-accent-pink);
-}
-
 /* --- Footer --------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-4);

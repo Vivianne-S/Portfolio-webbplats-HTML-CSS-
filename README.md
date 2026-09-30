@@ -56,8 +56,7 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 
 ### 2. Layout
 
-- [x] **Flexbox:** header/nav, startsidans hero och kort, Om mig (bio + illustration,
-      *Min väg*, *På fritiden*), kontaktlayout och formulärrad
+- [x] **Flexbox:** header/nav, startsidans hero och *Min väg*, Om mig (*På fritiden*, *Vad jag gör*), kontaktlayout och formulärrad
 - [x] **CSS Grid:** projektkorten i `.project-grid` (1 → 2 → 3 kolumner)
 - [x] Konsekvent BEM-inspirerad namngivning (`site-header__inner`, `project-card__image`)
 
@@ -122,6 +121,6 @@ Validerat 2026-09-30:
 
 1. Navigera Start → Projekt → Om mig → Kontakt.
 2. Dra i fönstret och stanna vid **480px** och **768px** (meny, hero, projektgrid, hobbykort).
-3. **Flexbox:** t.ex. hero på startsidan eller *Min väg* på Om mig — kolumn på mobil, rad på desktop.
+3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
 4. **CSS Grid:** `.project-grid` på Projektsidan — 1, 2 respektive 3 kolumner.
 5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

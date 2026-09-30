@@ -63,7 +63,7 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 ### 3. Responsivitet
 
 - [x] Mobil-först
-- [x] Brytpunkter **480px** och **768px**
+- [x] Brytpunkter **480px**, **768px**, **1024px** och **1280px**
 - [x] Bilder med `max-width: 100%`, `width`/`height` i HTML och lätta SVG:er (ca 0,5–3 kB)
 
 ### 4. Typografi och färg
@@ -120,7 +120,7 @@ Validerat 2026-09-30:
 ## För den muntliga redovisningen (6–7 min)
 
 1. Navigera Start → Projekt → Om mig → Kontakt.
-2. Dra i fönstret och stanna vid **480px** och **768px** (meny, hero, projektgrid, hobbykort).
+2. Dra i fönstret och stanna vid **480px**, **768px**, **1024px** och **1280px** (meny, hero, projektgrid, hobbykort).
 3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
 4. **CSS Grid:** `.project-grid` på Projektsidan — 1, 2 respektive 3 kolumner.
 5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

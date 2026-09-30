@@ -1,6 +1,6 @@
 /* ==========================================================================
    Layout: sidans ram (container, header, navigation, footer)
-   Mobil-först. Brytpunkter: 480px (stor mobil) och 768px (surfplatta/desktop).
+   Mobil-först. Brytpunkter: 480px, 768px, 1024px och 1280px.
    ========================================================================== */
 
 /* --- Container ------------------------------------------------------------ */
@@ -127,5 +127,35 @@ main {
   .site-footer__inner {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+/* --- Brytpunkt 3: 1024px (laptop) ----------------------------------------- */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .site-header__inner {
+    padding-block: var(--space-3);
+  }
+
+  .nav__list {
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+}
+
+/* --- Brytpunkt 4: 1280px (stor desktop) ----------------------------------- */
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  .site-logo {
+    font-size: 1.5rem;
   }
 }

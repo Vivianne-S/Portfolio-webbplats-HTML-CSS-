@@ -112,6 +112,20 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .hero {
+    gap: var(--space-8);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+  }
+
+  .card-list {
+    gap: var(--space-4);
+  }
+}
+
 /* --- Projektkort (CSS Grid) ----------------------------------------------- */
 .project-grid {
   display: grid;
@@ -174,6 +188,18 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .project-grid {
+    gap: var(--space-4);
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-grid {
+    gap: var(--space-6);
+  }
+}
+
 /* --- Om mig (Flexbox) ----------------------------------------------------- */
 .about {
   display: flex;
@@ -218,6 +244,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .about-path {
+    gap: var(--space-4);
+  }
+}
+
 .hobby-list {
   display: flex;
   flex-direction: column;
@@ -255,7 +287,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hobby-card {
     max-width: calc(25% - 1.125rem);
   }
@@ -327,5 +359,11 @@
 
   .form__row {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    gap: var(--space-8);
   }
 }

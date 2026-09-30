@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="flow-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="0.55" stop-color="#b24bff"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="flow-glow" cx="0.45" cy="0.4" r="0.65">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#030014" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="#140a28"/>
+  <rect width="480" height="360" fill="url(#flow-glow)"/>
+  <rect x="40" y="36" width="400" height="288" rx="14" fill="#0e081c" stroke="url(#flow-neon)" stroke-width="3"/>
+  <rect x="40" y="36" width="72" height="288" rx="14" fill="#0a0618"/>
+  <rect x="40" y="36" width="72" height="36" fill="#140a28"/>
+  <circle cx="64" cy="54" r="8" fill="url(#flow-neon)"/>
+  <rect x="56" y="92" width="40" height="8" rx="4" fill="#ff2bd6"/>
+  <rect x="56" y="116" width="40" height="8" rx="4" fill="#5e5678"/>
+  <rect x="56" y="140" width="40" height="8" rx="4" fill="#5e5678"/>
+  <rect x="56" y="164" width="40" height="8" rx="4" fill="#818cf8"/>
+  <rect x="132" y="56" width="140" height="12" rx="6" fill="#f0a8ff"/>
+  <rect x="132" y="84" width="88" height="72" rx="10" fill="#140a28" stroke="#ff2bd6" stroke-width="2"/>
+  <rect x="232" y="116" width="16" height="40" rx="4" fill="#ff2bd6"/>
+  <rect x="256" y="100" width="16" height="56" rx="4" fill="#b24bff"/>
+  <rect x="280" y="84" width="16" height="72" rx="4" fill="#818cf8"/>
+  <rect x="304" y="108" width="16" height="48" rx="4" fill="#f0a8ff"/>
+  <rect x="328" y="92" width="16" height="64" rx="4" fill="#c084fc"/>
+  <rect x="352" y="76" width="16" height="80" rx="4" fill="#6366f1"/>
+  <rect x="132" y="172" width="90" height="120" rx="10" fill="#140a28" stroke="#b24bff" stroke-width="2"/>
+  <rect x="146" y="188" width="62" height="8" rx="4" fill="#ff2bd6"/>
+  <rect x="146" y="208" width="62" height="20" rx="6" fill="#1a1033"/>
+  <rect x="146" y="236" width="62" height="20" rx="6" fill="#1a1033"/>
+  <rect x="146" y="264" width="46" height="12" rx="6" fill="#5e5678"/>
+  <rect x="236" y="172" width="90" height="120" rx="10" fill="#140a28" stroke="#b24bff" stroke-width="2"/>
+  <rect x="250" y="188" width="62" height="8" rx="4" fill="#b24bff"/>
+  <rect x="250" y="208" width="62" height="20" rx="6" fill="#1a1033"/>
+  <rect x="250" y="236" width="62" height="20" rx="6" fill="#1a1033"/>
+  <rect x="250" y="264" width="38" height="12" rx="6" fill="#5e5678"/>
+  <rect x="340" y="172" width="80" height="120" rx="10" fill="#140a28" stroke="#818cf8" stroke-width="2"/>
+  <rect x="354" y="188" width="52" height="8" rx="4" fill="#818cf8"/>
+  <rect x="354" y="208" width="52" height="20" rx="6" fill="url(#flow-neon)"/>
+  <rect x="354" y="236" width="52" height="20" rx="6" fill="#1a1033"/>
+</svg>

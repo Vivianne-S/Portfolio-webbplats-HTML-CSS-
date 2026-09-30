@@ -11,8 +11,21 @@
   padding-inline: var(--space-2);
 }
 
+/* Sidan som kolumn: header, växande main, footer längst ner */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 /* --- Header och navigation (Flexbox) -------------------------------------- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: linear-gradient(180deg, rgba(3, 0, 20, 0.94), rgba(3, 0, 20, 0.78));
   border-bottom: 1px solid var(--color-border);
 }

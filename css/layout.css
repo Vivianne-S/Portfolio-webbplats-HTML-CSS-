@@ -87,7 +87,7 @@ main {
 }
 
 .section--divider {
-  border-top: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-accent-pink);
 }
 
 /* --- Footer --------------------------------------------------------------- */

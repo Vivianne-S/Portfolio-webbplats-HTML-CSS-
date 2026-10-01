@@ -1,6 +1,7 @@
-/* Grund: reset, rubriker, fokus */
-
-/* --- Grund: reset, rubriker, fokus ---------------------------------------- */
+/* ==========================================================================
+   base.css
+   Reset, rubriker, länkar, fokus, skip-länk — inget Flexbox eller Grid här
+   ========================================================================== */
 *,
 *::before,
 *::after {

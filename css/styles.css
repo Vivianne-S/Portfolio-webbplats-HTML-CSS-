@@ -1,9 +1,14 @@
 /* ==========================================================================
    styles.css
-   En stilmall, uppdelad i avsnitt: variabler, grund, layout, komponenter.
+   Alla regler i en fil, samma ordning som HTML länkar:
+   variables → base → layout (FLEXBOX sidskal) → components
+   GRID · Projects ligger i components-avsnittet.
    ========================================================================== */
 
-/* --- Variabler: färger, typografi, avstånd -------------------------------- */
+/* ==========================================================================
+   variables.css
+   Färger, typografi, avstånd — inget Flexbox eller Grid här
+   ========================================================================== */
 :root {
   --color-bg: #030014;
   --color-surface: #0e081c;
@@ -36,7 +41,10 @@
   --transition: 0.2s ease;
 }
 
-/* --- Grund: reset, rubriker, fokus ---------------------------------------- */
+/* ==========================================================================
+   base.css
+   Reset, rubriker, länkar, fokus, skip-länk — inget Flexbox eller Grid här
+   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -163,7 +171,18 @@ a:hover {
   }
 }
 
-/* --- Layout: header, meny, footer ----------------------------------------- */
+/* ==========================================================================
+   layout.css
+   Sidskalet som ligger på alla sidor.
+
+   FLEXBOX · Header, meny, footer
+   GRID    finns inte här — se components.css (Projects)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FLEXBOX · Container och sidskal
+   body är en kolumn så footern hamnar längst ner
+   -------------------------------------------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -180,6 +199,10 @@ main {
   flex: 1 0 auto;
 }
 
+/* --------------------------------------------------------------------------
+   FLEXBOX · Header och meny
+   Mobil: logo ovanför länkar. 768px: rad med plats emellan
+   -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -188,7 +211,8 @@ main {
   border-bottom: 1px solid var(--color-border);
 }
 
-.header-bar {
+.header-bar,
+.site-header .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,15 +231,18 @@ main {
   color: var(--color-accent-soft);
 }
 
+nav ul,
 .nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-1) var(--space-2);
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
+nav a,
 .nav-link {
   display: inline-block;
   padding: var(--space-1) 0.25rem;
@@ -224,15 +251,18 @@ main {
   text-decoration: none;
 }
 
+nav a:visited,
 .nav-link:visited {
   color: var(--color-text);
 }
 
+nav a:hover,
 .nav-link:hover {
   border-bottom-color: var(--color-accent-purple);
   color: var(--color-link-hover);
 }
 
+nav a[aria-current="page"],
 .nav-link[aria-current="page"] {
   border-bottom-color: var(--color-accent-pink);
   font-weight: 600;
@@ -247,6 +277,9 @@ main {
   border-block: 1px solid var(--color-border);
 }
 
+/* --------------------------------------------------------------------------
+   FLEXBOX · Footer
+   -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
@@ -273,7 +306,8 @@ main {
 }
 
 @media (min-width: 768px) {
-  .header-bar {
+  .header-bar,
+  .site-header .container {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -316,7 +350,78 @@ main {
   }
 }
 
-/* --- Komponenter: knappar, hero, projekt, formulär ------------------------ */
+/* ==========================================================================
+   components.css
+   Innehåll per sida. Layout-verktyg står i kommentaren.
+
+   FLEXBOX · Meny (kopia)     om layout.css inte hinner laddas
+   FLEXBOX · Knappar
+   FLEXBOX · Start            hero + Min väg
+   GRID    · Projects         enda CSS Grid på sajten
+   FLEXBOX · Om mig           text, steg, hobbyer
+   FLEXBOX · Kontakt          intro + formulär
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FLEXBOX · Meny (kopia av layout.css)
+   -------------------------------------------------------------------------- */
+.site-header .container,
+.header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding-block: var(--space-2);
+}
+
+nav ul,
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a,
+.nav-link {
+  display: inline-block;
+  padding: var(--space-1) 0.25rem;
+  border-bottom: 3px solid transparent;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+nav a:visited,
+.nav-link:visited {
+  color: var(--color-text);
+}
+
+nav a:hover,
+.nav-link:hover {
+  border-bottom-color: var(--color-accent-purple);
+  color: var(--color-link-hover);
+}
+
+nav a[aria-current="page"],
+.nav-link[aria-current="page"] {
+  border-bottom-color: var(--color-accent-pink);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .site-header .container,
+  .header-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FLEXBOX · Knappar
+   -------------------------------------------------------------------------- */
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -352,7 +457,10 @@ main {
   margin-top: var(--space-4);
 }
 
-/* --- Hero (Flexbox) ------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   FLEXBOX · Start · Hero
+   Mobil: text ovanför bild. 768px: två kolumner
+   -------------------------------------------------------------------------- */
 .hero {
   display: flex;
   flex-direction: column;
@@ -384,7 +492,31 @@ main {
   box-shadow: var(--shadow-card);
 }
 
-/* --- Kort (Flexbox) ------------------------------------------------------- */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .hero-text,
+  .hero-figure {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    gap: var(--space-8);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FLEXBOX · Start · Min väg (korten)
+   -------------------------------------------------------------------------- */
 .card-list {
   display: flex;
   flex-direction: column;
@@ -409,38 +541,30 @@ main {
   color: var(--color-text-muted);
 }
 
-/* --- Brytpunkt: 768px --------------------------------------------------- */
 @media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    gap: var(--space-6);
-  }
-
-  .hero-text,
-  .hero-figure {
-    flex: 1;
-  }
-
   .card-list {
     flex-direction: row;
   }
 }
 
 @media (min-width: 1024px) {
-  .hero {
-    gap: var(--space-8);
-  }
-
-  .lead {
-    font-size: 1.25rem;
-  }
-
   .card-list {
     gap: var(--space-4);
   }
 }
 
-/* --- Projekt (CSS Grid) --------------------------------------------------- */
+/* ==========================================================================
+   GRID · Projects
+   Enda CSS Grid. Inne i varje kort: FLEXBOX (bild + text i kolumn).
+
+   1 spår            mobil
+   2 spår            från 480px, featured tar hela raden
+   6 spår            från 768px
+     featured        4 + 2  (stor + liten)
+     vanligt kort    span 2
+     mid-project     span 3  (två jämnbreda)
+     wide-project    3 / 7   (liten + stor till höger)
+   ========================================================================== */
 .projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -517,7 +641,6 @@ main {
     grid-column: span 2;
   }
 
-  /* Stor + liten, två jämnbreda, spegelvänd stor till höger */
   .featured-project {
     grid-column: 1 / 5;
   }
@@ -543,7 +666,9 @@ main {
   }
 }
 
-/* --- Om mig (Flexbox) ----------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   FLEXBOX · Om mig
+   -------------------------------------------------------------------------- */
 .about {
   display: flex;
   flex-direction: column;
@@ -648,7 +773,10 @@ main {
   }
 }
 
-/* --- Kontaktformulär ------------------------------------------------------ */
+/* --------------------------------------------------------------------------
+   FLEXBOX · Kontakt
+   Mobil: intro ovanför formulär. 768px: två kolumner, namn+e-post på rad
+   -------------------------------------------------------------------------- */
 .contact {
   display: flex;
   flex-direction: column;

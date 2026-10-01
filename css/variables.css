@@ -1,6 +1,7 @@
-/* Variabler: färger, typografi, avstånd */
-
-/* --- Variabler: färger, typografi, avstånd -------------------------------- */
+/* ==========================================================================
+   variables.css
+   Färger, typografi, avstånd — inget Flexbox eller Grid här
+   ========================================================================== */
 :root {
   --color-bg: #030014;
   --color-surface: #0e081c;

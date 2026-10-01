@@ -41,8 +41,8 @@ HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa w
 ├── css/
 │   ├── variables.css    Färger, typografi, avstånd
 │   ├── base.css         Reset, rubriker, fokus, skip-länk
-│   ├── layout.css       Header, meny, footer, brytpunkter
-│   ├── components.css   Hero, projekt, hobbyer, formulär
+│   ├── layout.css       FLEXBOX · header, meny, footer
+│   ├── components.css   FLEXBOX · sidorna, GRID · Projects
 │   └── styles.css       Samma regler samlade i en fil (översikt)
 ├── assets/images/       SVG-illustrationer och favicon
 └── README.md
@@ -59,7 +59,7 @@ HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa w
 ### 2. Layout
 
 - [x] **Flexbox:** header/nav, startsidans hero och *Min väg*, Om mig (*På fritiden*, *Vad jag gör*), kontaktlayout och formulärrad
-- [x] **CSS Grid:** projektkorten i `.projects` (1 kolumn → 2 → 6 spår där Spelinsikt spänner 4 kolumner)
+- [x] **CSS Grid:** projektkorten i `.projects` (1 kolumn → 2 → 6 spår: stor+liten, tre lika, två mitten, spegelvänd stor)
 - [x] Tydliga class-namn (`project`, `featured-project`, `header-bar`)
 
 ### 3. Responsivitet
@@ -123,5 +123,5 @@ Validerat 2026-09-30:
 1. Navigera Start → Projekt → Om mig → Kontakt.
 2. Dra i fönstret och stanna vid **480px**, **768px**, **1024px** och **1280px** (meny, hero, projektgrid, hobbykort).
 3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
-4. **CSS Grid:** `.projects` på Projektsidan — 1 kolumn, 2 kolumner, sedan 6 spår där Spelinsikt (`.featured-project`) spänner över fyra (`grid-column: 1 / 5`).
+4. **CSS Grid:** `.projects` på Projektsidan — sök `GRID · Projects` i `css/components.css`. 1 kolumn, 2 kolumner, sedan 6 spår (stor+liten, tre lika, två mitten, spegelvänd stor). **Flexbox:** sök `FLEXBOX` i `layout.css` och `components.css`.
 5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

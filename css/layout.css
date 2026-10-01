@@ -1,6 +1,15 @@
-/* Layout: header, meny, footer */
+/* ==========================================================================
+   layout.css
+   Sidskalet som ligger på alla sidor.
 
-/* --- Layout: header, meny, footer ----------------------------------------- */
+   FLEXBOX · Header, meny, footer
+   GRID    finns inte här — se components.css (Projects)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FLEXBOX · Container och sidskal
+   body är en kolumn så footern hamnar längst ner
+   -------------------------------------------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -17,6 +26,10 @@ main {
   flex: 1 0 auto;
 }
 
+/* --------------------------------------------------------------------------
+   FLEXBOX · Header och meny
+   Mobil: logo ovanför länkar. 768px: rad med plats emellan
+   -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -91,6 +104,9 @@ nav a[aria-current="page"],
   border-block: 1px solid var(--color-border);
 }
 
+/* --------------------------------------------------------------------------
+   FLEXBOX · Footer
+   -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);

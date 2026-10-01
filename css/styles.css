@@ -1,7 +1,193 @@
-/* Komponenter: knappar, hero, projekt, formulär */
+/* ==========================================================================
+   styles.css
+   En stilmall, uppdelad i avsnitt: variabler, grund, layout, komponenter.
+   ========================================================================== */
 
-/* Meny (även via nav ul, så den inte tappas vid gammal cache) */
-.site-header .container,
+/* --- Variabler: färger, typografi, avstånd -------------------------------- */
+:root {
+  --color-bg: #030014;
+  --color-surface: #0e081c;
+  --color-surface-elevated: #140a28;
+  --color-text: #f5f7ff;
+  --color-text-muted: #a8adc4;
+  --color-accent-pink: #ff2bd6;
+  --color-accent-purple: #b24bff;
+  --color-accent-soft: #f0a8ff;
+  --color-accent-strong: #a21caf;
+  --color-link: var(--color-accent-soft);
+  --color-link-hover: #ffffff;
+  --color-focus: #67e8f9;
+  --color-border: rgba(255, 75, 220, 0.28);
+  --color-border-strong: rgba(178, 75, 255, 0.45);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(178, 75, 255, 0.4);
+  --shadow-glow: 0 0 24px rgba(255, 43, 214, 0.45);
+  --font-family: Inter, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --radius: 0.75rem;
+  --container-max: 70rem;
+  --transition: 0.2s ease;
+}
+
+/* --- Grund: reset, rubriker, fokus ---------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--line-height-heading);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+p + p {
+  margin-top: var(--space-2);
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: var(--space-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+/* --- Layout: header, meny, footer ----------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(3, 0, 20, 0.94), rgba(3, 0, 20, 0.78));
+  border-bottom: 1px solid var(--color-border);
+}
+
 .header-bar {
   display: flex;
   flex-direction: column;
@@ -10,18 +196,26 @@
   padding-block: var(--space-2);
 }
 
-nav ul,
+.site-logo {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-logo:hover {
+  color: var(--color-accent-soft);
+}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-1) var(--space-2);
-  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav a,
 .nav-link {
   display: inline-block;
   padding: var(--space-1) 0.25rem;
@@ -30,28 +224,95 @@ nav a,
   text-decoration: none;
 }
 
-nav a:visited,
 .nav-link:visited {
   color: var(--color-text);
 }
 
-nav a:hover,
 .nav-link:hover {
   border-bottom-color: var(--color-accent-purple);
   color: var(--color-link-hover);
 }
 
-nav a[aria-current="page"],
 .nav-link[aria-current="page"] {
   border-bottom-color: var(--color-accent-pink);
   font-weight: 600;
 }
 
+.section {
+  padding-block: var(--space-6);
+}
+
+.alt-section {
+  background-color: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.site-footer {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footer-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding-inline: var(--space-3);
+  }
+
+  .nav-list {
+    gap: var(--space-1) var(--space-3);
+  }
+}
+
 @media (min-width: 768px) {
-  .site-header .container,
   .header-bar {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .footer-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .header-bar {
+    padding-block: var(--space-3);
+  }
+
+  .nav-list {
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  .site-logo {
+    font-size: 1.5rem;
   }
 }
 

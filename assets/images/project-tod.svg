@@ -12,11 +12,18 @@
   </defs>
   <rect width="480" height="360" fill="#140a28"/>
   <rect width="480" height="360" fill="url(#tod-glow)"/>
-  <rect x="70" y="70" width="150" height="210" rx="18" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
-  <circle cx="145" cy="150" r="28" fill="none" stroke="#ff2bd6" stroke-width="6"/>
-  <rect x="141" y="128" width="8" height="28" rx="4" fill="#f0a8ff"/>
-  <circle cx="145" cy="176" r="5" fill="#f0a8ff"/>
-  <rect x="260" y="70" width="150" height="210" rx="18" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
-  <rect x="328" y="118" width="14" height="70" rx="7" fill="#818cf8"/>
-  <circle cx="335" cy="212" r="10" fill="#818cf8"/>
+  <rect x="48" y="78" width="132" height="196" rx="16" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
+  <circle cx="114" cy="156" r="26" fill="none" stroke="#ff2bd6" stroke-width="6"/>
+  <rect x="110" y="136" width="8" height="26" rx="4" fill="#f0a8ff"/>
+  <circle cx="114" cy="180" r="5" fill="#f0a8ff"/>
+  <rect x="300" y="78" width="132" height="196" rx="16" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
+  <rect x="360" y="128" width="12" height="64" rx="6" fill="#818cf8"/>
+  <circle cx="366" cy="214" r="9" fill="#818cf8"/>
+  <g transform="rotate(-22 240 200)">
+    <ellipse cx="240" cy="92" rx="16" ry="8" fill="#0e081c" stroke="#f0a8ff" stroke-width="3"/>
+    <rect x="228" y="96" width="24" height="40" rx="6" fill="#0e081c" stroke="#b24bff" stroke-width="3"/>
+    <path d="M214 140 C214 132 266 132 266 140 L274 248 C274 272 206 272 206 248 Z" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
+    <ellipse cx="240" cy="176" rx="12" ry="18" fill="#1a1033"/>
+    <path d="M232 156 Q240 168 248 196" fill="none" stroke="#f0a8ff" stroke-width="3" stroke-linecap="round"/>
+  </g>
 </svg>

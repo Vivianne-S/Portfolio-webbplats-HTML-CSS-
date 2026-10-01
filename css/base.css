@@ -1,9 +1,6 @@
-/* ==========================================================================
-   Base: reset, typografi och tillgänglighet
-   Mobil-först. Bredare layouter läggs på med media queries i layout.css.
-   ========================================================================== */
+/* Grund: reset, rubriker, fokus */
 
-/* --- Reset ---------------------------------------------------------------- */
+/* --- Grund: reset, rubriker, fokus ---------------------------------------- */
 *,
 *::before,
 *::after {
@@ -27,7 +24,6 @@ body {
   line-height: var(--line-height-body);
 }
 
-/* Responsiva bilder som standard */
 img,
 picture {
   display: block;
@@ -35,7 +31,6 @@ picture {
   height: auto;
 }
 
-/* --- Typografi: rubrikhierarki h1-h3 -------------------------------------- */
 h1,
 h2,
 h3 {
@@ -92,7 +87,6 @@ p + p {
   margin-top: var(--space-2);
 }
 
-/* --- Länkar --------------------------------------------------------------- */
 a {
   color: var(--color-link);
   text-underline-offset: 0.2em;
@@ -103,13 +97,11 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-/* --- Tillgänglighet: tydlig fokusmarkering vid tangentbordsnavigering ----- */
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 
-/* Hoppa-till-innehåll-länk, syns bara vid fokus */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -125,7 +117,6 @@ a:hover {
   top: var(--space-1);
 }
 
-/* Respektera användare som vill ha mindre rörelse */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

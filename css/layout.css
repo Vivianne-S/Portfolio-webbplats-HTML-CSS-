@@ -1,9 +1,6 @@
-/* ==========================================================================
-   Layout: sidans ram (container, header, navigation, footer)
-   Mobil-först. Brytpunkter: 480px, 768px, 1024px och 1280px.
-   ========================================================================== */
+/* Layout: header, meny, footer */
 
-/* --- Container ------------------------------------------------------------ */
+/* --- Layout: header, meny, footer ----------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -11,7 +8,6 @@
   padding-inline: var(--space-2);
 }
 
-/* Sidan som kolumn: header, växande main, footer längst ner */
 body {
   display: flex;
   flex-direction: column;
@@ -21,7 +17,6 @@ main {
   flex: 1 0 auto;
 }
 
-/* --- Header och navigation (Flexbox) -------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -30,7 +25,8 @@ main {
   border-bottom: 1px solid var(--color-border);
 }
 
-.site-header__inner {
+.header-bar,
+.site-header .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,16 +45,19 @@ main {
   color: var(--color-accent-soft);
 }
 
-.nav__list {
+nav ul,
+.nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-1) var(--space-2);
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav__link {
+nav a,
+.nav-link {
   display: inline-block;
   padding: var(--space-1) 0.25rem;
   border-bottom: 3px solid transparent;
@@ -66,27 +65,32 @@ main {
   text-decoration: none;
 }
 
-.nav__link:hover {
+nav a:visited,
+.nav-link:visited {
+  color: var(--color-text);
+}
+
+nav a:hover,
+.nav-link:hover {
   border-bottom-color: var(--color-accent-purple);
   color: var(--color-link-hover);
 }
 
-.nav__link[aria-current="page"] {
+nav a[aria-current="page"],
+.nav-link[aria-current="page"] {
   border-bottom-color: var(--color-accent-pink);
   font-weight: 600;
 }
 
-/* --- Huvudinnehåll -------------------------------------------------------- */
 .section {
   padding-block: var(--space-6);
 }
 
-.section--alt {
+.alt-section {
   background-color: var(--color-surface);
   border-block: 1px solid var(--color-border);
 }
 
-/* --- Footer --------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
@@ -95,27 +99,26 @@ main {
   text-align: center;
 }
 
-.site-footer__inner {
+.footer-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-1);
 }
 
-/* --- Brytpunkt 1: 480px --------------------------------------------------- */
 @media (min-width: 480px) {
   .container {
     padding-inline: var(--space-3);
   }
 
-  .nav__list {
+  .nav-list {
     gap: var(--space-1) var(--space-3);
   }
 }
 
-/* --- Brytpunkt 2: 768px --------------------------------------------------- */
 @media (min-width: 768px) {
-  .site-header__inner {
+  .header-bar,
+  .site-header .container {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -124,23 +127,22 @@ main {
     padding-block: var(--space-8);
   }
 
-  .site-footer__inner {
+  .footer-bar {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-/* --- Brytpunkt 3: 1024px (laptop) ----------------------------------------- */
 @media (min-width: 1024px) {
   .container {
     padding-inline: var(--space-4);
   }
 
-  .site-header__inner {
+  .header-bar {
     padding-block: var(--space-3);
   }
 
-  .nav__list {
+  .nav-list {
     gap: var(--space-2) var(--space-4);
   }
 
@@ -149,7 +151,6 @@ main {
   }
 }
 
-/* --- Brytpunkt 4: 1280px (stor desktop) ----------------------------------- */
 @media (min-width: 1280px) {
   .container {
     padding-inline: var(--space-6);

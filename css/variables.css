@@ -1,51 +1,33 @@
-/* ==========================================================================
-   Design tokens
-   Färgtema inspirerat av vivianne-sonnerborg.se (mörkt neon-tema).
-   Kontrast (WCAG) mot bakgrunden --color-bg anges vid varje färg.
-   ========================================================================== */
+/* Variabler: färger, typografi, avstånd */
 
+/* --- Variabler: färger, typografi, avstånd -------------------------------- */
 :root {
-  /* --- Bakgrunder -------------------------------------------------------- */
   --color-bg: #030014;
   --color-surface: #0e081c;
   --color-surface-elevated: #140a28;
-
-  /* --- Text -------------------------------------------------------------- */
-  --color-text: #f5f7ff;          /* 19.4:1 */
-  --color-text-muted: #a8adc4;    /*  9.3:1 */
-
-  /* --- Accenter ---------------------------------------------------------- */
-  --color-accent-pink: #ff2bd6;   /*  6.5:1 */
-  --color-accent-purple: #b24bff; /*  5.3:1 */
-  --color-accent-soft: #f0a8ff;   /* 11.6:1 */
-  --color-accent-strong: #a21caf; /* vit text på denna: 6.3:1 */
-
-  /* --- Funktionsfärger --------------------------------------------------- */
+  --color-text: #f5f7ff;
+  --color-text-muted: #a8adc4;
+  --color-accent-pink: #ff2bd6;
+  --color-accent-purple: #b24bff;
+  --color-accent-soft: #f0a8ff;
+  --color-accent-strong: #a21caf;
   --color-link: var(--color-accent-soft);
   --color-link-hover: #ffffff;
-  --color-focus: #67e8f9;         /* 14.3:1, syns tydligt mot rosa/lila */
+  --color-focus: #67e8f9;
   --color-border: rgba(255, 75, 220, 0.28);
   --color-border-strong: rgba(178, 75, 255, 0.45);
-
-  /* --- Skuggor ------------------------------------------------------------ */
   --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(178, 75, 255, 0.4);
   --shadow-glow: 0 0 24px rgba(255, 43, 214, 0.45);
-
-  /* --- Typografi --------------------------------------------------------- */
   --font-family: Inter, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
   --font-size-base: 1rem;
   --line-height-body: 1.6;
   --line-height-heading: 1.2;
-
-  /* --- Avstånd (8px-skala) ---------------------------------------------- */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-6: 3rem;
   --space-8: 4rem;
-
-  /* --- Övrigt ------------------------------------------------------------ */
   --radius: 0.75rem;
   --container-max: 70rem;
   --transition: 0.2s ease;

@@ -8,21 +8,21 @@
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css?v=5">
+  <link rel="stylesheet" href="css/components.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
 
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container header-bar">
       <a class="site-logo" href="index.html">Vivianne Sonnerborg</a>
       <nav class="nav" aria-label="Huvudmeny">
-        <ul class="nav__list">
-          <li><a class="nav__link" href="index.html">Start</a></li>
-          <li><a class="nav__link" href="projects.html">Projekt</a></li>
-          <li><a class="nav__link" href="about.html">Om mig</a></li>
-          <li><a class="nav__link" href="contact.html" aria-current="page">Kontakt</a></li>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Start</a></li>
+          <li><a class="nav-link" href="projects.html">Projekt</a></li>
+          <li><a class="nav-link" href="about.html">Om mig</a></li>
+          <li><a class="nav-link" href="contact.html" aria-current="page">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -31,7 +31,7 @@
   <main id="main">
     <section class="section" aria-labelledby="contact-title">
       <div class="container contact">
-        <div class="contact__intro">
+        <div class="contact-intro">
           <h1 id="contact-title">Kontakt</h1>
           <p class="lead">
             Har du ett projekt i tankarna, eller vill du bara säga hej? Fyll i
@@ -48,23 +48,23 @@
           action="mailto:vivvi.sonnerborg@hotmail.com"
           method="post"
           enctype="text/plain">
-          <p class="form__hint">Fält markerade med * är obligatoriska.</p>
+          <p class="form-hint">Fält markerade med * är obligatoriska.</p>
 
-          <div class="form__row">
-            <div class="form__field">
-              <label class="form__label" for="name">Namn *</label>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="name">Namn *</label>
               <input
-                class="form__input"
+                class="form-input"
                 id="name"
                 name="Namn"
                 type="text"
                 autocomplete="name"
                 required>
             </div>
-            <div class="form__field">
-              <label class="form__label" for="email">E-post *</label>
+            <div class="form-field">
+              <label class="form-label" for="email">E-post *</label>
               <input
-                class="form__input"
+                class="form-input"
                 id="email"
                 name="E-post"
                 type="email"
@@ -73,10 +73,10 @@
             </div>
           </div>
 
-          <div class="form__field">
-            <label class="form__label" for="message">Meddelande *</label>
+          <div class="form-field">
+            <label class="form-label" for="message">Meddelande *</label>
             <textarea
-              class="form__textarea"
+              class="form-textarea"
               id="message"
               name="Meddelande"
               rows="6"
@@ -92,7 +92,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
+    <div class="container footer-bar">
       <p>&copy; 2026 Vivianne Sonnerborg</p>
       <p>
         <a href="https://github.com/Vivianne-S">GitHub</a>

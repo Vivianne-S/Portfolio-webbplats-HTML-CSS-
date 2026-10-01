@@ -8,21 +8,21 @@
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css?v=5">
+  <link rel="stylesheet" href="css/components.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
 
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container header-bar">
       <a class="site-logo" href="index.html">Vivianne Sonnerborg</a>
       <nav class="nav" aria-label="Huvudmeny">
-        <ul class="nav__list">
-          <li><a class="nav__link" href="index.html" aria-current="page">Start</a></li>
-          <li><a class="nav__link" href="projects.html">Projekt</a></li>
-          <li><a class="nav__link" href="about.html">Om mig</a></li>
-          <li><a class="nav__link" href="contact.html">Kontakt</a></li>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html" aria-current="page">Start</a></li>
+          <li><a class="nav-link" href="projects.html">Projekt</a></li>
+          <li><a class="nav-link" href="about.html">Om mig</a></li>
+          <li><a class="nav-link" href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -31,20 +31,20 @@
   <main id="main">
     <section class="section" aria-labelledby="hero-title">
       <div class="container hero">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Webb- och apputvecklare</p>
+        <div class="hero-text">
+          <p class="hero-label">Webb- och apputvecklare</p>
           <h1 id="hero-title">Hej, jag är Vivianne</h1>
           <p class="lead">
             Jag började min utvecklarresa med två år inom mobilapputveckling, men nyfikenheten stannade inte där. Idag fördjupar jag mig inom backend och webbutveckling.
           </p>
           <div class="button-group">
             <a class="button" href="projects.html">Se mina projekt</a>
-            <a class="button button--outline" href="contact.html">Kontakta mig</a>
+            <a class="button button-outline" href="contact.html">Kontakta mig</a>
           </div>
         </div>
-        <figure class="hero__figure">
+        <figure class="hero-figure">
           <img
-            class="hero__image"
+            class="hero-image"
             src="assets/images/hero.svg"
             width="480"
             height="360"
@@ -53,12 +53,12 @@
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="path-title">
+    <section class="section alt-section" aria-labelledby="path-title">
       <div class="container">
         <h2 id="path-title">Min väg</h2>
-        <div class="about-path">
+        <div class="steps">
           <article class="card">
-            <p class="about-path__step">Steg 1</p>
+            <p class="step-label">Steg 1</p>
             <h3>Mobilutveckling</h3>
             <p>
               Två års studier där jag byggde appar för både iOS och Android och
@@ -66,7 +66,7 @@
             </p>
           </article>
           <article class="card">
-            <p class="about-path__step">Steg 2</p>
+            <p class="step-label">Steg 2</p>
             <h3>Backend och webb</h3>
             <p>
               Nu fördjupar jag mig i backend och webbutveckling för att kunna
@@ -74,7 +74,7 @@
             </p>
           </article>
           <article class="card">
-            <p class="about-path__step">Steg 3</p>
+            <p class="step-label">Steg 3</p>
             <h3>Egna projekt</h3>
             <p>
               Vid sidan av studierna bygger jag egna projekt, som de du ser på
@@ -99,7 +99,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
+    <div class="container footer-bar">
       <p>&copy; 2026 Vivianne Sonnerborg</p>
       <p>
         <a href="https://github.com/Vivianne-S">GitHub</a>

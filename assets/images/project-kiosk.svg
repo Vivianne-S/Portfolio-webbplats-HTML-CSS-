@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="kiosk-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="0.55" stop-color="#b24bff"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="kiosk-glow" cx="0.5" cy="0.4" r="0.65">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#030014" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="#140a28"/>
+  <rect width="480" height="360" fill="url(#kiosk-glow)"/>
+  <path d="M56 118 L424 118 L392 168 L88 168 Z" fill="#0e081c" stroke="url(#kiosk-neon)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M108 118 L128 168" fill="none" stroke="#ff2bd6" stroke-width="8"/>
+  <path d="M168 118 L184 168" fill="none" stroke="#b24bff" stroke-width="8"/>
+  <path d="M228 118 L240 168" fill="none" stroke="#818cf8" stroke-width="8"/>
+  <path d="M288 118 L296 168" fill="none" stroke="#ff2bd6" stroke-width="8"/>
+  <path d="M348 118 L352 168" fill="none" stroke="#b24bff" stroke-width="8"/>
+  <rect x="104" y="168" width="272" height="108" rx="8" fill="#0e081c" stroke="url(#kiosk-neon)" stroke-width="3"/>
+  <rect x="128" y="188" width="88" height="56" rx="8" fill="#140a28" stroke="#f0a8ff" stroke-width="2"/>
+  <rect x="264" y="188" width="88" height="56" rx="8" fill="#140a28" stroke="#818cf8" stroke-width="2"/>
+  <rect x="72" y="268" width="336" height="28" rx="8" fill="#0e081c" stroke="url(#kiosk-neon)" stroke-width="3"/>
+  <ellipse cx="168" cy="214" rx="22" ry="18" fill="#0e081c" stroke="#ff2bd6" stroke-width="3"/>
+  <ellipse cx="188" cy="222" rx="18" ry="16" fill="#0e081c" stroke="#b24bff" stroke-width="3"/>
+  <path d="M164 232 L192 232 L178 268 Z" fill="#0e081c" stroke="#818cf8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M292 188 L328 188 L318 244 L302 244 Z" fill="#0e081c" stroke="#c084fc" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="310" cy="188" rx="20" ry="8" fill="#0e081c" stroke="#f0a8ff" stroke-width="3"/>
+  <line x1="322" y1="168" x2="330" y2="210" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+  <rect x="214" y="236" width="52" height="32" rx="6" fill="#140a28" stroke="#ff2bd6" stroke-width="2"/>
+  <rect x="224" y="244" width="32" height="6" rx="3" fill="#f0a8ff"/>
+  <rect x="224" y="254" width="20" height="6" rx="3" fill="#5e5678"/>
+</svg>

@@ -30,6 +30,7 @@ Publicerad länk saknas i denna version. Se *Kända brister*.
 ## Mappstruktur
 
 Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/styles`.
+HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa webbläsare):
 
 ```
 .
@@ -38,10 +39,11 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 ├── about.html
 ├── contact.html
 ├── css/
-│   ├── variables.css    Design tokens (färg, typografi, avstånd)
+│   ├── variables.css    Färger, typografi, avstånd
 │   ├── base.css         Reset, rubriker, fokus, skip-länk
-│   ├── layout.css       Header, nav, footer, brytpunkter
-│   └── components.css   Hero, kort, grid, formulär
+│   ├── layout.css       Header, meny, footer, brytpunkter
+│   ├── components.css   Hero, projekt, hobbyer, formulär
+│   └── styles.css       Samma regler samlade i en fil (översikt)
 ├── assets/images/       SVG-illustrationer och favicon
 └── README.md
 ```
@@ -57,8 +59,8 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 ### 2. Layout
 
 - [x] **Flexbox:** header/nav, startsidans hero och *Min väg*, Om mig (*På fritiden*, *Vad jag gör*), kontaktlayout och formulärrad
-- [x] **CSS Grid:** projektkorten i `.project-grid` (1 kolumn → 2 → 6 spår där Lillemans spänner 4 kolumner)
-- [x] Konsekvent BEM-inspirerad namngivning (`site-header__inner`, `project-card__image`)
+- [x] **CSS Grid:** projektkorten i `.projects` (1 kolumn → 2 → 6 spår där Lillemans spänner 4 kolumner)
+- [x] Tydliga class-namn (`project`, `featured-project`, `header-bar`)
 
 ### 3. Responsivitet
 
@@ -121,5 +123,5 @@ Validerat 2026-09-30:
 1. Navigera Start → Projekt → Om mig → Kontakt.
 2. Dra i fönstret och stanna vid **480px**, **768px**, **1024px** och **1280px** (meny, hero, projektgrid, hobbykort).
 3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
-4. **CSS Grid:** `.project-grid` på Projektsidan — 1 kolumn, 2 kolumner, sedan 6 spår där Lillemans spänner över fyra (`grid-column: 1 / 5`).
+4. **CSS Grid:** `.projects` på Projektsidan — 1 kolumn, 2 kolumner, sedan 6 spår där Lillemans (`.featured-project`) spänner över fyra (`grid-column: 1 / 5`).
 5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

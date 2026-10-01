@@ -78,7 +78,7 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 ### 5. Tillgänglighet
 
 - [x] Beskrivande `alt` på alla bilder
-- [x] Beskrivande länkar (inte “klicka här”), t.ex. *Hör av dig om Café Avenyn*
+- [x] Beskrivande länkar (inte “klicka här”), t.ex. *Öppna HomeFit på GitHub*
 - [x] Skip-länk *Hoppa till innehållet*
 - [x] Tydlig cyan fokusram (`:focus-visible`) för tangentbordsnavigering
 - [x] `aria-current="page"` i menyn, `aria-label` på `nav`
@@ -114,8 +114,7 @@ Validerat 2026-09-30:
 
 - Webbplatsen är inte publicerad på Netlify ännu.
 - Formuläret använder `mailto:` och öppnar användarens e-postprogram. Det kräver ingen server, men fungerar sämre om besökaren saknar e-postklient.
-- Projekten *Vanor*, *Café Avenyn* och *Flowboard* är påhittade exempel, vilket uppgiften tillåter.
-- Illustrationerna är stiliserade, inte foton (bland annat Nala och familjen).
+- Illustrationerna är stiliserade, inte skärmdumpar från apparna.
 
 ## För den muntliga redovisningen (6–7 min)
 

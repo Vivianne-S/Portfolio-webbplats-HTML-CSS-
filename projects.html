@@ -6,6 +6,10 @@
   <title>Projekt | Vivianne Sonnerborg</title>
   <meta name="description" content="Utvalda webb- och appprojekt av Vivianne Sonnerborg.">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <!--
+    CSS: variables, base, layout, components.
+    Grid på den här sidan ligger i components.css (.projects).
+  -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css?v=5">
@@ -14,6 +18,7 @@
 <body>
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
 
+  <!-- Flexbox-meny, samma som på startsidan (layout.css). -->
   <header class="site-header">
     <div class="container header-bar">
       <a class="site-logo" href="index.html">Vivianne Sonnerborg</a>
@@ -31,14 +36,22 @@
   <main id="main">
     <section class="section" aria-labelledby="projects-title">
       <div class="container">
+        <!-- h1. Projektnamnen under är h2. -->
         <h1 id="projects-title">Projekt</h1>
         <p class="lead">
           Ett urval av appar och webbprojekt, bland annat från min LIA och
           <a href="https://github.com/Vivianne-S">GitHub</a>.
         </p>
 
+        <!--
+          CSS Grid, components.css, class projects.
+          Markera den här diven i inspektören (inte bilden).
+          1 kolumn mobil, 2 från 480px, 6 spår från 768px.
+          Inuti varje kort: flexbox (bild + text).
+        -->
         <div class="projects">
           <article class="project featured-project">
+            <!-- alt-text på varje projektbild. -->
             <img
               class="project-image"
               src="assets/images/project-spelinsikt.svg"

@@ -42,8 +42,7 @@ HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa w
 │   ├── variables.css    Färger, typografi, avstånd
 │   ├── base.css         Reset, rubriker, fokus, skip-länk
 │   ├── layout.css       FLEXBOX · header, meny, footer
-│   ├── components.css   FLEXBOX · sidorna, GRID · Projects
-│   └── styles.css       Samma regler samlade i en fil (översikt)
+│   └── components.css   FLEXBOX på sidorna, GRID på Projects
 ├── assets/images/       SVG-illustrationer och favicon
 └── README.md
 ```

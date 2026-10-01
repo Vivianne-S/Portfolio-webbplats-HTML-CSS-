@@ -1,15 +1,6 @@
-/* ==========================================================================
-   layout.css
-   Sidskalet som ligger på alla sidor.
+/* FLEXBOX: header, meny, footer. Grid ligger i components.css. */
 
-   FLEXBOX · Header, meny, footer
-   GRID    finns inte här — se components.css (Projects)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   FLEXBOX · Container och sidskal
-   body är en kolumn så footern hamnar längst ner
-   -------------------------------------------------------------------------- */
+/* FLEXBOX: sidskal. body är kolumn så footern hamnar längst ner. */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -26,10 +17,7 @@ main {
   flex: 1 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   FLEXBOX · Header och meny
-   Mobil: logo ovanför länkar. 768px: rad med plats emellan
-   -------------------------------------------------------------------------- */
+/* FLEXBOX: header och meny. Mobil kolumn, från 768px rad. */
 .site-header {
   position: sticky;
   top: 0;
@@ -104,9 +92,7 @@ nav a[aria-current="page"],
   border-block: 1px solid var(--color-border);
 }
 
-/* --------------------------------------------------------------------------
-   FLEXBOX · Footer
-   -------------------------------------------------------------------------- */
+/* FLEXBOX: footer */
 .site-footer {
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
@@ -122,6 +108,7 @@ nav a[aria-current="page"],
   gap: var(--space-1);
 }
 
+/* 480px: större padding. */
 @media (min-width: 480px) {
   .container {
     padding-inline: var(--space-3);
@@ -132,6 +119,7 @@ nav a[aria-current="page"],
   }
 }
 
+/* 768px: meny och footer blir rad (surfplatta). */
 @media (min-width: 768px) {
   .header-bar,
   .site-header .container {
@@ -149,6 +137,7 @@ nav a[aria-current="page"],
   }
 }
 
+/* 1024px: laptop. */
 @media (min-width: 1024px) {
   .container {
     padding-inline: var(--space-4);
@@ -167,6 +156,7 @@ nav a[aria-current="page"],
   }
 }
 
+/* 1280px: desktop. */
 @media (min-width: 1280px) {
   .container {
     padding-inline: var(--space-6);

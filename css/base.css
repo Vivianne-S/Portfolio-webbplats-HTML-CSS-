@@ -1,7 +1,5 @@
-/* ==========================================================================
-   base.css
-   Reset, rubriker, länkar, fokus, skip-länk — inget Flexbox eller Grid här
-   ========================================================================== */
+/* Reset, rubriker, länkar, fokus och skip-länk.
+   h1–h3 växer vid 480, 768, 1024, 1280. line-height 1.2 på rubrik, 1.6 på body. */
 *,
 *::before,
 *::after {

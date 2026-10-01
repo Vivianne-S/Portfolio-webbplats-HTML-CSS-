@@ -256,8 +256,17 @@ nav a[aria-current="page"],
     grid-column: span 2;
   }
 
+  /* Stor + liten, två jämnbreda, spegelvänd stor till höger */
   .featured-project {
     grid-column: 1 / 5;
+  }
+
+  .mid-project {
+    grid-column: span 3;
+  }
+
+  .wide-project {
+    grid-column: 3 / 7;
   }
 }
 

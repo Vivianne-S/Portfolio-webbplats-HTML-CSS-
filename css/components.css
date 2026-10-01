@@ -180,17 +180,42 @@
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .project-card--wide {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (min-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .project-card {
+    grid-column: span 2;
+  }
+
+  .project-card--wide {
+    grid-column: 1 / 5;
   }
 }
 
 @media (min-width: 1024px) {
   .project-grid {
     gap: var(--space-4);
+  }
+
+  .project-card--wide {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+  }
+
+  .project-card--wide .project-card__image {
+    aspect-ratio: auto;
+    height: 100%;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
   }
 }
 

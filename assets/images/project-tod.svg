@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="tod-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="0.55" stop-color="#b24bff"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="tod-glow" cx="0.5" cy="0.4" r="0.65">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#030014" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="#140a28"/>
+  <rect width="480" height="360" fill="url(#tod-glow)"/>
+  <rect x="70" y="70" width="150" height="210" rx="18" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
+  <circle cx="145" cy="150" r="28" fill="none" stroke="#ff2bd6" stroke-width="6"/>
+  <rect x="141" y="128" width="8" height="28" rx="4" fill="#f0a8ff"/>
+  <circle cx="145" cy="176" r="5" fill="#f0a8ff"/>
+  <rect x="260" y="70" width="150" height="210" rx="18" fill="#0e081c" stroke="url(#tod-neon)" stroke-width="3"/>
+  <rect x="328" y="118" width="14" height="70" rx="7" fill="#818cf8"/>
+  <circle cx="335" cy="212" r="10" fill="#818cf8"/>
+</svg>

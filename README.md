@@ -57,7 +57,7 @@ Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/s
 ### 2. Layout
 
 - [x] **Flexbox:** header/nav, startsidans hero och *Min väg*, Om mig (*På fritiden*, *Vad jag gör*), kontaktlayout och formulärrad
-- [x] **CSS Grid:** projektkorten i `.project-grid` (1 → 2 → 3 kolumner)
+- [x] **CSS Grid:** projektkorten i `.project-grid` (1 kolumn → 2 → 6 spår där Lillemans spänner 4 kolumner)
 - [x] Konsekvent BEM-inspirerad namngivning (`site-header__inner`, `project-card__image`)
 
 ### 3. Responsivitet
@@ -114,12 +114,12 @@ Validerat 2026-09-30:
 
 - Webbplatsen är inte publicerad på Netlify ännu.
 - Formuläret använder `mailto:` och öppnar användarens e-postprogram. Det kräver ingen server, men fungerar sämre om besökaren saknar e-postklient.
-- Illustrationerna är stiliserade, inte skärmdumpar från apparna.
+- Illustrationerna är stiliserade, inte skärmdumpar från apparna. Nala och familjen är också ritade, inte foton.
 
 ## För den muntliga redovisningen (6–7 min)
 
 1. Navigera Start → Projekt → Om mig → Kontakt.
 2. Dra i fönstret och stanna vid **480px**, **768px**, **1024px** och **1280px** (meny, hero, projektgrid, hobbykort).
 3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
-4. **CSS Grid:** `.project-grid` på Projektsidan — 1, 2 respektive 3 kolumner.
+4. **CSS Grid:** `.project-grid` på Projektsidan — 1 kolumn, 2 kolumner, sedan 6 spår där Lillemans spänner över fyra (`grid-column: 1 / 5`).
 5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

@@ -302,8 +302,19 @@ nav a[aria-current="page"],
   align-items: center;
 }
 
-.about-text {
+.about-text,
+.about-figure {
   width: 100%;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 
 .steps {
@@ -330,6 +341,11 @@ nav a[aria-current="page"],
     flex-direction: row;
     align-items: center;
     gap: var(--space-6);
+  }
+
+  .about-text,
+  .about-figure {
+    flex: 1;
   }
 
   .steps {

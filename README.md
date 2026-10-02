@@ -30,7 +30,7 @@ Publicerad länk saknas i denna version. Se *Kända brister*.
 ## Mappstruktur
 
 Inlämningen följer zip-kravet (`/css/` och `/assets/`), inte exempelnamnet `/styles`.
-HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa webbläsare):
+HTML länkar `css/styles.css`, som i sin tur hämtar de andra filerna med `@import`.
 
 ```
 .
@@ -39,10 +39,11 @@ HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa w
 ├── about.html
 ├── contact.html
 ├── css/
+│   ├── styles.css       Hämtar de fyra filerna nedan
 │   ├── variables.css    Färger, typografi, avstånd
-│   ├── base.css         Reset, rubriker, fokus, skip-länk
-│   ├── layout.css       FLEXBOX · header, meny, footer
-│   └── components.css   FLEXBOX på sidorna, GRID på Projects
+│   ├── base.css         Reset, rubriker, fokus
+│   ├── layout.css       Flexbox: header, meny, footer
+│   └── components.css   Flexbox på sidorna, Grid på Projects
 ├── assets/images/       SVG-illustrationer och favicon
 └── README.md
 ```
@@ -80,7 +81,6 @@ HTML länkar fyra stilmallar i ordning (utan `@import`, som kan strula i vissa w
 
 - [x] Beskrivande `alt` på alla bilder
 - [x] Beskrivande länkar (inte “klicka här”), t.ex. *Öppna HomeFit på GitHub*
-- [x] Skip-länk *Hoppa till innehållet*
 - [x] Tydlig cyan fokusram (`:focus-visible`) för tangentbordsnavigering
 - [x] `aria-current="page"` i menyn, `aria-label` på `nav`
 

@@ -1,4 +1,4 @@
-/* Grundstilar för hela sajten: reset, rubriker, länkar, fokus och skip-länk.
+/* Grundstilar för hela sajten: reset, rubriker, länkar och fokus.
    h1–h3 blir större vid 480, 768, 1024 och 1280. */
 *,
 *::before,
@@ -99,21 +99,6 @@ a:hover {
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: var(--space-2);
-  padding: var(--space-1) var(--space-2);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  border-radius: var(--radius);
-  z-index: 100;
-}
-
-.skip-link:focus {
-  top: var(--space-1);
 }
 
 @media (prefers-reduced-motion: reduce) {

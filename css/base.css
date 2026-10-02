@@ -1,5 +1,5 @@
-/* Reset, rubriker, länkar, fokus och skip-länk.
-   h1–h3 växer vid 480, 768, 1024, 1280. line-height 1.2 på rubrik, 1.6 på body. */
+/* Grundstilar för hela sajten: reset, rubriker, länkar, fokus och skip-länk.
+   h1–h3 blir större vid 480, 768, 1024 och 1280. */
 *,
 *::before,
 *::after {

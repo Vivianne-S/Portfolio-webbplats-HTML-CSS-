@@ -117,10 +117,3 @@ Validerat 2026-09-30:
 - Formuläret använder `mailto:` och öppnar användarens e-postprogram. Det kräver ingen server, men fungerar sämre om besökaren saknar e-postklient.
 - Illustrationerna är stiliserade, inte skärmdumpar från apparna. Nala och familjen är också ritade, inte foton.
 
-## För den muntliga redovisningen (6–7 min)
-
-1. Navigera Start → Projekt → Om mig → Kontakt.
-2. Dra i fönstret och stanna vid **480px**, **768px**, **1024px** och **1280px** (meny, hero, projektgrid, hobbykort).
-3. **Flexbox:** t.ex. hero eller *Min väg* på startsidan — kolumn på mobil, rad på desktop.
-4. **CSS Grid:** `.projects` på Projektsidan — sök `GRID · Projects` i `css/components.css`. 1 kolumn, 2 kolumner, sedan 6 spår (stor+liten, tre lika, två mitten, spegelvänd stor). **Flexbox:** sök `FLEXBOX` i `layout.css` och `components.css`.
-5. Tabba från adressfältet: skip-länk, meny, knappar; peka på cyan fokus och en `alt`-text i inspektören.

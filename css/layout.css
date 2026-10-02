@@ -1,6 +1,7 @@
-/* FLEXBOX: header, meny, footer. Grid ligger i components.css. */
+/* layout.css — Flexbox för header, meny och footer.. */
 
-/* FLEXBOX: sidskal. body är kolumn så footern hamnar längst ner. */
+/* Flexbox. body är en kolumn: header, main, footer.
+   main växer så footern alltid hamnar längst ner. */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -17,7 +18,7 @@ main {
   flex: 1 0 auto;
 }
 
-/* FLEXBOX: header och meny. Mobil kolumn, från 768px rad. */
+/* Flexbox. Mobil: logga ovanför menyn. Från 768px: logga vänster, meny höger. */
 .site-header {
   position: sticky;
   top: 0;
@@ -92,7 +93,7 @@ nav a[aria-current="page"],
   border-block: 1px solid var(--color-border);
 }
 
-/* FLEXBOX: footer */
+/* Flexbox. Footer: copyright och GitHub under varandra på mobil, på rad från 768px. */
 .site-footer {
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
@@ -108,7 +109,7 @@ nav a[aria-current="page"],
   gap: var(--space-1);
 }
 
-/* 480px: större padding. */
+/* Brytpunkt 480px — större telefon. Lite mer luft i sidorna. */
 @media (min-width: 480px) {
   .container {
     padding-inline: var(--space-3);
@@ -119,7 +120,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* 768px: meny och footer blir rad (surfplatta). */
+/* Brytpunkt 768px — surfplatta. Meny och footer byter från kolumn till rad. */
 @media (min-width: 768px) {
   .header-bar,
   .site-header .container {
@@ -137,7 +138,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* 1024px: laptop. */
+/* Brytpunkt 1024px — laptop. Mer padding och större sektioner. */
 @media (min-width: 1024px) {
   .container {
     padding-inline: var(--space-4);
@@ -156,7 +157,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* 1280px: desktop. */
+/* Brytpunkt 1280px — desktop. Ännu mer luft och större logga. */
 @media (min-width: 1280px) {
   .container {
     padding-inline: var(--space-6);

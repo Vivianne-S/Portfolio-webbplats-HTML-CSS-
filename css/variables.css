@@ -1,5 +1,6 @@
-/* Färger, typografi och avstånd.
-   Radavstånd: brödtext 1.6, rubriker 1.2. */
+/* Alla färger, typsnitt och avstånd ligger här.
+   Brödtext har line-height 1.6, rubriker 1.2.
+   Ljus text på mörk bakgrund för kontrast. */
 :root {
   --color-bg: #030014;
   --color-surface: #0e081c;

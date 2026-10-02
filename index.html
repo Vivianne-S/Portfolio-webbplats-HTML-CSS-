@@ -6,10 +6,7 @@
   <title>Vivianne Sonnerborg | Webb- och apputvecklare i Göteborg</title>
   <meta name="description" content="Portfolio för Vivianne Sonnerborg, webb- och apputvecklare i Göteborg. Webbplatser, webbappar och mobilappar från design till lansering.">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <!--
-    CSS-filer: variables (färger), base (h1–h3 och radavstånd), layout (flex på meny), components (flex på hero).
-    Brytpunkter i CSS: 480px, 768px, 1024px, 1280px. Mobil först, sen större skärmar.
-  -->
+  <!-- Fyra CSS-filer. Brytpunkter: 480, 768, 1024, 1280. Mobil-först. -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css?v=5">
@@ -18,7 +15,7 @@
 <body>
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
 
-  <!-- Flexbox, layout.css. Mobil: logo över menyn. Från 768px: rad. Samma meny på alla sidor. -->
+  <!-- Flexbox i layout.css. Samma meny på alla sidor. -->
   <header class="site-header">
     <div class="container header-bar">
       <a class="site-logo" href="index.html">Vivianne Sonnerborg</a>
@@ -34,12 +31,12 @@
   </header>
 
   <main id="main">
-    <!-- Flexbox, components.css. Mobil: text över bild. Från 768px: två kolumner. -->
+    <!-- Flexbox i components.css. Hero blir två kolumner från 768px. -->
     <section class="section" aria-labelledby="hero-title">
       <div class="container hero">
         <div class="hero-text">
           <p class="hero-label">Webb- och apputvecklare</p>
-          <!-- En h1 per sida. h2 och h3 kommer under. Storlek och line-height 1.2 i base.css. -->
+          <!-- En h1 per sida. h2 och h3 kommer under. -->
           <h1 id="hero-title">Välkommen till Viviannes Portfolio</h1>
           <p class="lead">
             Jag började min utvecklarresa med två år inom mobilapputveckling men nyfikenheten stannade inte där. Idag fördjupar jag mig inom backend och webbutveckling.
@@ -62,7 +59,7 @@
 
     <section class="section alt-section" aria-labelledby="path-title">
       <div class="container">
-        <!-- Flexbox. h2 här, h3 i korten. Kolumn på mobil, rad från 768px. -->
+        <!-- Flexbox. Tre kort: kolumn på mobil, rad från 768px. -->
         <h2 id="path-title">Min väg</h2>
         <div class="steps">
           <article class="card">

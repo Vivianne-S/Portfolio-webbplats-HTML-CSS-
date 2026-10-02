@@ -1,15 +1,10 @@
 
 
-/* components.css
-   Innehåll per sida. Layout-verktyg står i kommentaren.
-   FLEXBOX · Meny (kopia)     om layout.css inte hinner laddas
-   FLEXBOX · Knappar
-   FLEXBOX · Start            hero + Min väg
-   GRID    · Projects         enda CSS Grid på sajten
-   FLEXBOX · Om mig           text, steg, hobbyer
-   FLEXBOX · Kontakt          intro + formulär
-*/
-/* FLEXBOX: meny (kopia av layout.css). */
+/* components.css — stilar per sida.
+   Flexbox: Start, Om mig, Kontakt och knappar.
+   CSS Grid: bara projektsidan (.projects). */
+
+/* Flexbox. Samma menyregler som i layout.css, ifall den filen inte laddas. */
 .site-header .container,
 .header-bar {
   display: flex;
@@ -64,7 +59,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* FLEXBOX: knappar */
+/* Flexbox. Knapparna i hero och CTA ligger på rad och kan wrappa. */
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -100,7 +95,7 @@ nav a[aria-current="page"],
   margin-top: var(--space-4);
 }
 
-/* FLEXBOX: Start, hero. Mobil kolumn, från 768px två kolumner. */
+/* Flexbox, startsidan. Hero: text över bilden på mobil, två kolumner från 768px. */
 .hero {
   display: flex;
   flex-direction: column;
@@ -154,7 +149,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* FLEXBOX: Start, Min väg. */
+/* Flexbox, startsidan. Min väg: tre kort i kolumn på mobil, på rad från 768px. */
 .card-list {
   display: flex;
   flex-direction: column;
@@ -191,8 +186,8 @@ nav a[aria-current="page"],
   }
 }
 
-/* GRID: Projects. Enda CSS Grid. Inne i korten är det flexbox.
-   1 spår mobil, 2 från 480px, 6 från 768px (stor+liten, tre lika, två mitten, spegelvänd). */
+/* CSS Grid används på projektsidan för att lägga ut projektkorten.
+   Inuti varje projektkort används Flexbox för att placera bild och text. */
 .projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -250,6 +245,7 @@ nav a[aria-current="page"],
   font-weight: 600;
 }
 
+/* 480px: två kolumner. Det stora kortet tar hela första raden. */
 @media (min-width: 480px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
@@ -260,6 +256,7 @@ nav a[aria-current="page"],
   }
 }
 
+/* 768px: sex spår. Stor+liten, tre lika, två mitten, sen liten + stor till höger. */
 @media (min-width: 768px) {
   .projects {
     grid-template-columns: repeat(6, 1fr);
@@ -282,6 +279,7 @@ nav a[aria-current="page"],
   }
 }
 
+/* 1024px och 1280px: bara mer mellanrum mellan korten. */
 @media (min-width: 1024px) {
   .projects {
     gap: var(--space-4);
@@ -294,7 +292,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* FLEXBOX: Om mig */
+/* Flexbox, Om mig. Text och foto: kolumn på mobil, bredvid varandra från 768px. */
 .about {
   display: flex;
   flex-direction: column;
@@ -397,6 +395,7 @@ nav a[aria-current="page"],
   color: var(--color-text-muted);
 }
 
+/* Hobbykort: en kolumn på mobil, två från 480px, fyra från 1024px. */
 @media (min-width: 480px) {
   .hobbies {
     flex-direction: row;
@@ -415,7 +414,7 @@ nav a[aria-current="page"],
   }
 }
 
-/* FLEXBOX: Kontakt. Mobil kolumn, från 768px två kolumner. */
+/* Flexbox, Kontakt. Text över formuläret på mobil. Från 768px: text vänster, formulär höger. */
 .contact {
   display: flex;
   flex-direction: column;

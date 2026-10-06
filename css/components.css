@@ -19,7 +19,6 @@
 }
 
 .button:hover {
-  border-color: var(--color-accent-pink);
   background-color: var(--color-accent-pink);
   color: var(--color-bg);
   box-shadow: var(--shadow-glow);

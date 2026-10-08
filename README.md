@@ -10,6 +10,8 @@ vad jag kan och hur de når mig.
 Färgtemat är hämtat från [vivianne-sonnerborg.se](https://www.vivianne-sonnerborg.se):
 mörk bakgrund, neonrosa/lila accenter och ljus text.
 
+**Live:** [https://vivianne-portfolio.netlify.app](https://vivianne-portfolio.netlify.app)
+
 ## Kör lokalt
 
 1. Ladda ner eller packa upp projektet.
@@ -24,8 +26,6 @@ python3 -m http.server 8765
 ```
 
 Öppna sedan [http://127.0.0.1:8765/index.html](http://127.0.0.1:8765/index.html).
-
-Publicerad länk saknas i denna version. Se *Kända brister*.
 
 ## Mappstruktur
 
@@ -91,7 +91,8 @@ HTML länkar `css/styles.css`, som i sin tur hämtar de andra filerna med `@impo
 
 ### 7. Publicering / körning
 
-- [x] Körinstruktion i denna README (se ovan)
+- [x] Publicerad på Netlify: [vivianne-portfolio.netlify.app](https://vivianne-portfolio.netlify.app)
+- [x] Körinstruktion för lokal körning i denna README (se ovan)
 
 ### 8. Kvalitet
 
@@ -102,7 +103,7 @@ HTML länkar `css/styles.css`, som i sin tur hämtar de andra filerna med `@impo
 
 ### 9. Kodvalidering
 
-Validerat 2026-09-30:
+Validerat mot live-URL:en:
 
 | Verktyg | Resultat |
 |---|---|
@@ -113,7 +114,6 @@ Validerat 2026-09-30:
 
 ## Kända brister / att-göra
 
-- Webbplatsen är inte publicerad på Netlify ännu.
 - Formuläret använder `mailto:` och öppnar användarens e-postprogram. Det kräver ingen server, men fungerar sämre om besökaren saknar e-postklient.
 - Illustrationerna är stiliserade, inte skärmdumpar från apparna. Nala och familjen är också ritade, inte foton.
 
